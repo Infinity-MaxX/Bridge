@@ -20,7 +20,7 @@ namespace Bridge
         /// <summary>
         /// Creates an object of class MC, with LicensePlate and Date as properties
         /// </summary>
-        public MC() { }
+        public MC() : base() { }
         #endregion
 
         #region Methods

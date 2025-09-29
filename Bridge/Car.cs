@@ -20,7 +20,7 @@ namespace Bridge
         /// <summary>
         /// Creates an object of class Car, with LicensePlate and Date as properties
         /// </summary>
-        public Car() { }
+        public Car() : base() { }
         #endregion
 
         #region Methods
