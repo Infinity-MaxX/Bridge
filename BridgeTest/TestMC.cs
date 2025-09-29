@@ -5,43 +5,43 @@ namespace BridgeTest
 {
     [TestClass]
     [ExcludeFromCodeCoverage]
-    public class TestCar
+    public class TestMC
     {
         [TestMethod]
         // [DataRow()]
         public void TestConstructor()
         {
             // Arrange
-            Car car = new Car();
+            MC mc = new MC();
 
             // Assert
-            Assert.IsNotNull(car);
+            Assert.IsNotNull(mc);
         }
 
         [TestMethod]
         public void TestPrice()
         {
             // Arrange
-            Car car = new Car();
+            MC mc = new MC();
 
             // Act
-            int price = 230;
+            int price = 120;
 
             // Assert
-            Assert.AreEqual(car.Price(), price);
+            Assert.AreEqual(mc.Price(), price);
         }
 
         [TestMethod]
         public void TestVehicleType()
         {
             // Arrange
-            Car car = new Car();
+            MC mc = new MC();
 
             // Act
-            string vehicleType = "Car";
+            string vehicleType = "MC";
 
             // Assert
-            Assert.AreEqual(car.VehicleType(), vehicleType);
+            Assert.AreEqual(mc.VehicleType(), vehicleType);
         }
     }
 }
