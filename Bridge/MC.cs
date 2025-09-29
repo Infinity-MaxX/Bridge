@@ -6,38 +6,37 @@ using System.Threading.Tasks;
 
 namespace Bridge
 {
-    public class MC
+    public class MC : Vehicle
     {
         #region Instances
 
         #endregion
 
         #region Properties
-        public string LicensePlate { get; set; }
-        public DateTime Date { get; set; }
+        
         #endregion
 
         #region Constructor
         /// <summary>
-        /// Creates an object of class Car, with LicensePlate and Date as properties
+        /// Creates an object of class MC, with LicensePlate and Date as properties
         /// </summary>
         public MC() { }
         #endregion
 
         #region Methods
         /// <summary>
-        /// Returns the price of the Car. The price is currently fixed at 230.
+        /// Returns the price of the MC. Can be overriden.
         /// </summary>
         /// <returns></returns>
-        public double Price()
+        public override double Price()
         {
             return 120;
         }
         /// <summary>
-        /// Returns the vehicle type. The type is currently fixed as "Car".
+        /// Returns the vehicle type. Can be overriden.
         /// </summary>
         /// <returns></returns>
-        public string VehicleType()
+        public override string VehicleType()
         {
             return "MC";
         }

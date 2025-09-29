@@ -6,15 +6,14 @@ using System.Threading.Tasks;
 
 namespace Bridge
 {
-    public class Car
+    public class Car : Vehicle
     {
         #region Instances
 
         #endregion
 
         #region Properties
-        public string LicensePlate { get; set; }
-        public DateTime Date { get; set; }
+
         #endregion
 
         #region Constructor
@@ -26,18 +25,18 @@ namespace Bridge
 
         #region Methods
         /// <summary>
-        /// Returns the price of the Car. The price is currently fixed at 230.
+        /// Returns the price of the Car. Can be overriden.
         /// </summary>
         /// <returns></returns>
-        public double Price()
+        public override double Price()
         {
             return 230;
         }
         /// <summary>
-        /// Returns the vehicle type. The type is currently fixed as "Car".
+        /// Returns the vehicle type. Can be overriden.
         /// </summary>
         /// <returns></returns>
-        public string VehicleType()
+        public override string VehicleType()
         {
             return "Car";
         }
