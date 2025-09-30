@@ -18,27 +18,19 @@ namespace Bridge
 
         #region Constructor
         /// <summary>
-        /// Creates an object of class Car, with LicensePlate and Date as properties
+        /// Creates an object of class Car, with 
+        /// LicensePlate, Date and Brobizz as properties
         /// </summary>
-        // default constructor
-        public Car() : base() { }
-
         // parameterised constructor
-        public Car(string licensePlate, bool brobizz = false) : base(licensePlate, brobizz = false) { }
+        public Car(string licensePlate, bool brobizz = false) : base(licensePlate, brobizz)
+        {
+            _price = 230;
+        }
         #endregion
 
         #region Methods
         /// <summary>
-        /// Returns the price of the Car. Can be overriden.
-        /// </summary>
-        /// <returns></returns>
-        public override double Price(double defaultPrice = 230)
-        {
-            if (Brobizz == true) { return defaultPrice * 0.9; }
-            else { return defaultPrice; }
-        }
-        /// <summary>
-        /// Returns the vehicle type. Can be overriden.
+        /// Returns the type of vehicle as type "Car".
         /// </summary>
         /// <returns></returns>
         public override string VehicleType()

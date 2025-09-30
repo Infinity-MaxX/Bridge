@@ -19,26 +19,19 @@ namespace Bridge
 
         #region Constructor
         /// <summary>
-        /// Creates an object of class MC, with LicensePlate and Date as properties
+        /// Creates an object of class MC, with 
+        /// LicensePlate, Date and Brobizz as properties.
         /// </summary>
-        // default constructor
-        public MC() : base() { }
-
         // paramterised constructor
-        public MC(string licensePlate, bool brobizz) : base(licensePlate, brobizz = false) { }
+        public MC(string licensePlate, bool brobizz = false) : base(licensePlate, brobizz)
+        {
+            _price = 120;
+        }
         #endregion
 
         #region Methods
         /// <summary>
-        /// Returns the price of the MC.
-        /// </summary>
-        /// <returns></returns>
-        public override double Price(double defaultPrice = 120)
-        {
-            return defaultPrice;
-        }
-        /// <summary>
-        /// Returns the vehicle type.
+        /// Returns the type of vehicle as type "Motorcycle", shortened as "MC".
         /// </summary>
         /// <returns></returns>
         public override string VehicleType()
