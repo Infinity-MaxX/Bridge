@@ -27,9 +27,14 @@ namespace Bridge
         // parameterised constructor
         public Vehicle(string licensePlate)
         {
-            if (licensePlate != null && licensePlate.Length == 7){ LicensePlate = licensePlate; }
-            else { throw new ArgumentException("License Plate cannot be null or more than 7 characters long."); }
             _date = DateTime.Now;
+            if (licensePlate == null)
+            { throw new ArgumentNullException("License Plate cannot be null."); }
+            else
+            {
+                if (licensePlate.Length == 7) { LicensePlate = licensePlate; }
+                else { throw new ArgumentException("License Plate cannot be more than 7 characters long."); }
+            }
         }
         #endregion
 
