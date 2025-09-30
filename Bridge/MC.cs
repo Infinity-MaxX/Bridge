@@ -23,19 +23,22 @@ namespace Bridge
         /// </summary>
         // default constructor
         public MC() : base() { }
+
+        // paramterised constructor
+        public MC(string licensePlate, bool brobizz) : base(licensePlate, brobizz = false) { }
         #endregion
 
         #region Methods
         /// <summary>
-        /// Returns the price of the MC. Can be overriden.
+        /// Returns the price of the MC.
         /// </summary>
         /// <returns></returns>
-        public override double Price()
+        public override double Price(double defaultPrice = 120)
         {
-            return 120;
+            return defaultPrice;
         }
         /// <summary>
-        /// Returns the vehicle type. Can be overriden.
+        /// Returns the vehicle type.
         /// </summary>
         /// <returns></returns>
         public override string VehicleType()

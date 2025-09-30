@@ -22,6 +22,9 @@ namespace Bridge
         /// </summary>
         // default constructor
         public Car() : base() { }
+
+        // parameterised constructor
+        public Car(string licensePlate, bool brobizz = false) : base(licensePlate, brobizz = false) { }
         #endregion
 
         #region Methods
@@ -29,9 +32,10 @@ namespace Bridge
         /// Returns the price of the Car. Can be overriden.
         /// </summary>
         /// <returns></returns>
-        public override double Price()
+        public override double Price(double defaultPrice = 230)
         {
-            return 230;
+            if (Brobizz == true) { return defaultPrice * 0.9; }
+            else { return defaultPrice; }
         }
         /// <summary>
         /// Returns the vehicle type. Can be overriden.

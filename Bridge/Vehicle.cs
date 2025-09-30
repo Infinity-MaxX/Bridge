@@ -15,6 +15,7 @@ namespace Bridge
         #region Properties
         public string LicensePlate { get; private set; }
         public DateTime Date { get { return _date; } }
+        public bool Brobizz { get; set; }
         #endregion
 
         #region Constructor
@@ -24,28 +25,35 @@ namespace Bridge
         // default constructor
         public Vehicle() { }
 
-        // parameterised constructor
-        public Vehicle(string licensePlate)
+        // parameterised constructors
+        public Vehicle(string licensePlate, bool brobizz = false)
         {
             _date = DateTime.Now;
+            Brobizz = brobizz;
             if (licensePlate == null)
             { throw new ArgumentNullException("License Plate cannot be null."); }
             else
             {
-                if (licensePlate.Length == 7) { LicensePlate = licensePlate; }
+                if (licensePlate.Length <= 7) { LicensePlate = licensePlate; }
                 else { throw new ArgumentException("License Plate cannot be more than 7 characters long."); }
             }
         }
         #endregion
 
         #region Methods
-        public virtual double Price()
+        public virtual double Price(double defaultPrice = 100)
         {
-            return 100;
+            if (Brobizz == true) { return defaultPrice * 0.9; }
+            else { return defaultPrice; }
         }
         public virtual string VehicleType()
         {
-            return "Car";
+            return "Vehicle";
+        }
+        public virtual double BrobizzDiscount()
+        {
+            if (Brobizz == true) { return (Price() * 0.9); }
+            else { return Price(); }
         }
         #endregion
     }

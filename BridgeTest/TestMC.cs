@@ -27,7 +27,7 @@ namespace BridgeTest
             int price = 120;
 
             // Assert
-            Assert.AreEqual(mc.Price(), price);
+            Assert.AreEqual(price, mc.Price());
         }
 
         [TestMethod]
@@ -40,7 +40,7 @@ namespace BridgeTest
             string vehicleType = "MC";
 
             // Assert
-            Assert.AreEqual(mc.VehicleType(), vehicleType);
+            Assert.AreEqual(vehicleType, mc.VehicleType());
         }
     }
 }

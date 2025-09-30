@@ -27,7 +27,21 @@ namespace BridgeTest
             int price = 230;
 
             // Assert
-            Assert.AreEqual(car.Price(), price);
+            Assert.AreEqual(price, car.Price());
+        }
+
+        [TestMethod]
+        [DataRow("1234567", true)]
+        public void TestBrobizz(string licensePlate, bool brobizz)
+        {
+            // Arrange
+            Car car = new Car(licensePlate, brobizz);
+
+            // Act
+            double price = 207;
+
+            // Assert
+            Assert.AreEqual(price, car.Price());
         }
 
         [TestMethod]
@@ -40,7 +54,7 @@ namespace BridgeTest
             string vehicleType = "Car";
 
             // Assert
-            Assert.AreEqual(car.VehicleType(), vehicleType);
+            Assert.AreEqual(vehicleType, car.VehicleType());
         }
     }
 }

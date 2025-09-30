@@ -14,19 +14,15 @@ namespace BridgeTest
         {
             // Arrange
             Vehicle vehicle = new Vehicle(licensePlate);
-
-            // Assert
         }
 
-        //[TestMethod]
-        //[ExpectedException(typeof(ArgumentNullException))]
-        //public void TestNullLicensePlateProperty()
-        //{
-        //    // Arrange
-        //    Vehicle vehicle = new Vehicle();
-
-        //    // Assert
-        //}
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentNullException))]
+        public void TestNullLicensePlateProperty()
+        {
+            // Arrange
+            Vehicle vehicle = new Vehicle(null);
+        }
 
         //[TestMethod]
         //public void TestDateProperty()
@@ -56,7 +52,21 @@ namespace BridgeTest
             int price = 100;
 
             // Assert
-            Assert.AreEqual(vehicle.Price(), price);
+            Assert.AreEqual(price, vehicle.Price());
+        }
+
+        [TestMethod]
+        [DataRow("1234567", true)]
+        public void TestBrobizz(string licensePlate, bool brobizz)
+        {
+            // Arrange
+            Vehicle vehicle = new Vehicle(licensePlate, brobizz);
+
+            // Act
+            double price = 90;
+
+            // Assert
+            Assert.AreEqual(price, vehicle.Price());
         }
 
         [TestMethod]
@@ -66,10 +76,10 @@ namespace BridgeTest
             Vehicle vehicle = new Vehicle();
 
             // Act
-            string vehicleType = "Car";
+            string vehicleType = "Vehicle";
 
             // Assert
-            Assert.AreEqual(vehicle.VehicleType(), vehicleType);
+            Assert.AreEqual(vehicleType, vehicle.VehicleType());
         }
     }
 }
