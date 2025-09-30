@@ -8,7 +8,6 @@ namespace BridgeTest
     public class TestCar
     {
         [TestMethod]
-        // [DataRow()]
         public void TestConstructor()
         {
             // Arrange

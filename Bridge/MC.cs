@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Bridge
 {
@@ -20,6 +21,7 @@ namespace Bridge
         /// <summary>
         /// Creates an object of class MC, with LicensePlate and Date as properties
         /// </summary>
+        // default constructor
         public MC() : base() { }
         #endregion
 

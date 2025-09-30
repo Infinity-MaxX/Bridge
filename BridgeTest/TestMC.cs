@@ -8,7 +8,6 @@ namespace BridgeTest
     public class TestMC
     {
         [TestMethod]
-        // [DataRow()]
         public void TestConstructor()
         {
             // Arrange
