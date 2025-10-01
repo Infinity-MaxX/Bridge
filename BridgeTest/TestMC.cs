@@ -21,7 +21,7 @@ namespace BridgeTest
         public void TestNullLicensePlateProperty()
         {
             // Arrange
-            MC car = new MC(null);
+            MC mc = new MC(null);
         }
 
         //[TestMethod]

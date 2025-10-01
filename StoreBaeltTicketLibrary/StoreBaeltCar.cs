@@ -66,7 +66,7 @@ namespace StoreBaeltTicketLibrary
         /// <returns></returns>
         public override string VehicleType()
         {
-            return "StoreBaeltCar";
+            return "Car";
         }
         #endregion
     }

@@ -106,7 +106,7 @@ public class TestStoreBaeltCar
         StoreBaeltCar car = new StoreBaeltCar(licensePlate);
 
         // Act
-        string vehicleType = "StoreBaeltCar";
+        string vehicleType = "Car";
 
         // Assert
         Assert.AreEqual(vehicleType, car.VehicleType());
