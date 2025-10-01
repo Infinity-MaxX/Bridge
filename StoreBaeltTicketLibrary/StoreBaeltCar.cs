@@ -25,7 +25,7 @@ namespace StoreBaeltTicketLibrary
         }
         /// <summary>
         /// A constructor where the day of the week is provided at initialisation.
-        /// This constructor is used exclusively for testing purposes.
+        /// THIS CONSTRUCTOR IS USED EXLUSIVELY FOR TESTING PURPOSES.
         /// </summary>
         /// <param name="licensePlate"></param>
         /// <param name="day"></param>
