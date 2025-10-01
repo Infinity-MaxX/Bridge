@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Bridge</name>
+    </assembly>
+    <members>
+        <member name="M:Bridge.Car.#ctor(System.String,System.Boolean)">
+            <summary>
+            Creates an object of class Car, with 
+            LicensePlate, Date and Brobizz as properties
+            </summary>
+        </member>
+        <member name="M:Bridge.Car.VehicleType">
+            <summary>
+            Returns the type of vehicle as type "Car".
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Bridge.MC.#ctor(System.String,System.Boolean)">
+            <summary>
+            Creates an object of class MC, with 
+            LicensePlate, Date and Brobizz as properties.
+            </summary>
+        </member>
+        <member name="M:Bridge.MC.VehicleType">
+            <summary>
+            Returns the type of vehicle as type "Motorcycle", shortened as "MC".
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Bridge.Vehicle.#ctor(System.String,System.Boolean)">
+            <summary>
+            Creates an object of class Vehicle, with 
+            LicensePlate, Date and Brobizz as properties.
+            </summary>
+        </member>
+        <member name="M:Bridge.Vehicle.Price">
+            <summary>
+            Returns the price of the ticket. This function will also check
+            if the vehicle has Brobizz, and return the discount price if true.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Bridge.Vehicle.VehicleType">
+            <summary>
+            Returns the type of vehicle.
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
