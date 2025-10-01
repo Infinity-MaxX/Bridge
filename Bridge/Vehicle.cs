@@ -42,7 +42,7 @@ namespace Bridge
 
         #region Methods
         /// <summary>
-        /// Returns the price of the ticket. The function will also check
+        /// Returns the price of the ticket. This function will also check
         /// if the vehicle has Brobizz, and return the discount price if true.
         /// </summary>
         /// <returns></returns>
