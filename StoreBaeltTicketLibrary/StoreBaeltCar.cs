@@ -13,15 +13,30 @@ namespace StoreBaeltTicketLibrary
         #endregion
 
         #region Properties
-
+        public DayOfWeek Day { get; set; }
         #endregion
 
         #region Constructors
         public StoreBaeltCar(string licensePlate, bool brobizz = false)
             : base(licensePlate, brobizz)
         {
+            Day = DateTime.Now.DayOfWeek;
             _price = 230;
         }
+        /// <summary>
+        /// A constructor where the day of the week is provided at initialisation.
+        /// This constructor is used exclusively for testing purposes.
+        /// </summary>
+        /// <param name="licensePlate"></param>
+        /// <param name="day"></param>
+        /// <param name="brobizz"></param>
+        public StoreBaeltCar(string licensePlate, DayOfWeek day, bool brobizz = false)
+            : base(licensePlate, brobizz)
+        {
+            Day = day;
+            _price = 230;
+        }
+
         #endregion
 
         #region Methods
@@ -34,8 +49,7 @@ namespace StoreBaeltTicketLibrary
         /// <returns></returns>
         public override double Price()
         {
-            DayOfWeek today = DateTime.Now.DayOfWeek;
-            if (today == DayOfWeek.Sunday || today == DayOfWeek.Saturday)
+            if (Day == DayOfWeek.Sunday || Day == DayOfWeek.Saturday)
             {
                 if (Brobizz == true) { return _price * 0.85 * 0.9; }
                 else { return _price * 0.85; }
