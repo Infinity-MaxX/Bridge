@@ -28,7 +28,6 @@ namespace Bridge
         public Vehicle(string licensePlate, bool brobizz = false)
         {
             _date = DateTime.Now;   // set the current date and time
-            _price = 100;           // default value for a ticket
             Brobizz = brobizz;
             if (licensePlate == null)
             { throw new ArgumentNullException("License Plate cannot be null."); }
