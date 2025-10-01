@@ -7,9 +7,24 @@ using Bridge;
 
 namespace StoreBaeltTicketLibrary
 {
-    public class Car
+    public class StoreBaeltCar : Vehicle
     {
-        public Car() { }
+        #region Instances
+        #endregion
+
+        #region Properties
+
+        #endregion
+
+        #region Constructors
+        public StoreBaeltCar(string licensePlate, bool brobizz = false)
+            : base(licensePlate, brobizz)
+        {
+            _price = 230;
+        }
+        #endregion
+
+        #region Methods
         /// <summary>
         /// Returns the price of the ticket. This function will also check if
         /// the car is crossing on weekends, and if the car has Brobizz. Should 
@@ -31,5 +46,14 @@ namespace StoreBaeltTicketLibrary
                 else { return _price; }
             }
         }
+        /// <summary>
+        /// Returns the type of vehicle as type "StoreBaeltCar".
+        /// </summary>
+        /// <returns></returns>
+        public override string VehicleType()
+        {
+            return "StoreBaeltCar";
+        }
+        #endregion
     }
 }
