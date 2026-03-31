@@ -19,4 +19,4 @@ Dette bibliotek blev skrevet i forbindelse med en obligatorisk opgave på tredje
 
 ### Unit Testing
 
-## Test Out Results
+## Test Output Results
